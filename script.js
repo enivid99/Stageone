@@ -2,10 +2,10 @@ const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Fri
 function timeUpdate(){
     const currentDate = new Date();
     const currentDay = daysOfWeek[currentDate.getUTCDay()];
-    const currentUTCTime = currentDate.getTime();
+    const currentTimeUTC = currentDate.getTime();
             
-    document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `${currentDay}`;
-    document.querySelector("[data-testid='currentUTCTime']").textContent = `${currentUTCTime} ms`;
+    document.querySelector("[data-testid='currentDay']").textContent = `${currentDay}`;
+    document.querySelector("[data-testid='currentTimeUTC']").textContent = `${currentTimeUTC} ms`;
 }
 
 timeUpdate();
